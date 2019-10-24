@@ -5,7 +5,9 @@
 
   <project path="build" name="kernel/build" />
   <project path="common" name="kernel/common" revision="android-mainline" />
-  <project path="kernel/common-patches" name="kernel/common-patches" />
+  <project path="kernel/common-patches" name="kernel/common-patches" >
+      <linkfile src="android-mainline" dest="common/patches" />
+  </project>
   <project path="kernel/tests" name="kernel/tests" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" clone-depth="1" />
