@@ -3,6 +3,8 @@
   <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
   <default revision="master" remote="aosp" sync-j="4" />
 
+  <superproject name="kernel/superproject" remote="aosp"/>
+
   <project path="build" name="kernel/build" />
   <project path="common" name="kernel/common" revision="android-mainline" />
   <project path="kernel/common-patches" name="kernel/common-patches" >
