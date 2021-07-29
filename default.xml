@@ -25,4 +25,6 @@
 
   <project path="prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" clone-depth="1" />
   <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" clone-depth="1" />
+
+  <project path="external/stardoc" name="platform/external/stardoc" />
 </manifest>
