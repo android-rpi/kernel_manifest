@@ -9,11 +9,8 @@
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
     <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
   </project>
-  <project path="common" name="kernel/common" revision="android-mainline" >
+  <project path="common" name="kernel/common" revision="android13-5.15" >
     <linkfile src="." dest=".source_date_epoch_dir" />
-  </project>
-  <project path="kernel/common-patches" name="kernel/common-patches" >
-      <linkfile src="android-mainline" dest="common/patches" />
   </project>
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" revision="master" />
