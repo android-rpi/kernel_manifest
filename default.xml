@@ -5,9 +5,23 @@
 
   <superproject name="kernel/superproject" remote="aosp"/>
 
-  <project path="build" name="kernel/build" >
+  <project path="build/kernel" name="kernel/build" >
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
     <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
+    <linkfile src="build.sh" dest="build/build.sh" />
+    <linkfile src="build_abi.sh" dest="build/build_abi.sh" />
+    <linkfile src="build_test.sh" dest="build/build_test.sh" />
+    <linkfile src="build_utils.sh" dest="build/build_utils.sh" />
+    <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
+    <linkfile src="BUILD.bazel" dest="build/BUILD.bazel" />
+    <linkfile src="build-tools/path" dest="build/build-tools/path" />
+    <linkfile src="config.sh" dest="build/config.sh" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="_setup_env.sh" dest="build/_setup_env.sh" />
+    <linkfile src="multi-switcher.sh" dest="build/multi-switcher.sh" />
+    <linkfile src="kleaf" dest="build/kleaf" />
+    <linkfile src="abi" dest="build/abi" />
+    <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
   <project path="common" name="kernel/common" revision="android-mainline" >
     <linkfile src="." dest=".source_date_epoch_dir" />
@@ -19,11 +33,23 @@
   <project path="kernel/configs" name="kernel/configs" revision="master" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android-mainline" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" >
+    <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
+    <linkfile src="sysroot" dest="build/build-tools/sysroot" />
+  </project>
   <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" />
-  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
-  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="1" />
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" >
+    <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
+    <linkfile src="." dest="build/prebuilts/build-tools" />
+  </project>
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="1" >
+    <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
+    <linkfile src="." dest="build/prebuilts/clang-tools" />
+  </project>
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1"  >
+    <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
+    <linkfile src="." dest="build/prebuilts/kernel-build-tools" />
+  </project>
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
 
   <project path="prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" clone-depth="1" />
