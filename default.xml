@@ -33,10 +33,7 @@
   <project path="kernel/configs" name="kernel/configs" revision="master" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android-mainline" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" >
-    <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
-    <linkfile src="sysroot" dest="build/build-tools/sysroot" />
-  </project>
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" />
   <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" >
     <!-- TODO(b/204425264): Remove unused scripts and unused symlinks -->
