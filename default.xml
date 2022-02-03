@@ -19,7 +19,6 @@
     <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
     <linkfile src="_setup_env.sh" dest="build/_setup_env.sh" />
     <linkfile src="multi-switcher.sh" dest="build/multi-switcher.sh" />
-    <linkfile src="kleaf" dest="build/kleaf" />
     <linkfile src="abi" dest="build/abi" />
     <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
