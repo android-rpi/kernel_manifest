@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/" />
-  <default revision="master" remote="aosp" sync-j="4" />
+  <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
 
   <superproject name="kernel/superproject" remote="aosp"/>
 
   <project path="build" name="kernel/build" />
   <project path="hikey-modules" name="kernel/hikey-modules" revision="android12-5.10" />
   <project path="common" name="kernel/common" revision="android12-5.10" />
-  <project path="kernel/common-patches" name="kernel/common-patches" >
+  <project path="kernel/common-patches" name="kernel/common-patches" revision="master">
       <linkfile src="android-mainline" dest="common/patches" />
   </project>
   <project path="kernel/tests" name="kernel/tests" />
@@ -19,7 +19,7 @@
   <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
-  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
+  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" revision="master" />
 
   <remote  name="arpi" fetch="."/>
   <remove-project name="kernel/common"/>
