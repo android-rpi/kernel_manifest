@@ -4,7 +4,7 @@
  Make separate kernel directory apart from Android source.
 
   $ cd <kernel directory>
-  $ repo init -u https://github.com/android-rpi/kernel_manifest -b arpi-5.10
+  $ repo init -u https://github.com/android-rpi/kernel_manifest -b arpi-5.10-camic
   $ repo sync
  
 # Build Kernel
@@ -12,8 +12,9 @@
 
   Output files are under out/arpi-5.10/dist/
     Image.gz
-    bcm2711-rpi-*.dtb
+    bcm2711-rpi-4-b.dtb
     vc4-kms-v3d-pi4.dtbo
+    ov5647.dtbo
 
 # Build Android for Raspberry Pi 4
- https://github.com/android-rpi/device_arpi_rpi4
+ https://github.com/android-rpi/device_arpi_rpi4/tree/arpi-12-camic
