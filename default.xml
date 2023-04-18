@@ -19,9 +19,7 @@
     <linkfile src="abi" dest="build/abi" />
     <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
-  <project path="common" name="kernel/common" revision="android14-6.1" >
-    <linkfile src="." dest=".source_date_epoch_dir" />
-  </project>
+  <project path="common" name="kernel/common" revision="android14-6.1" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" revision="master" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android14-6.1" />
