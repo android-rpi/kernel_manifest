@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <remote  name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/" />  
   <default revision="master" remote="aosp" sync-j="4" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android14-6.1" />
 
-  <project path="build/kernel" name="kernel/build" >
+  <project path="build/kernel" name="kernel/build" revision="5ad8f177bc46b601f797a76f7ca64a3d13dcf267">
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
     <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
     <linkfile src="build.sh" dest="build/build.sh" />
@@ -19,7 +19,10 @@
     <linkfile src="abi" dest="build/abi" />
     <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
-  <project path="common" name="kernel/common" revision="android14-6.1" />
+  <remote  name="arpi" fetch="."/>  
+  <project path="common" name="kernel_arpi" revision="arpi14-6.1" remote="arpi">
+      <linkfile src="build.config.arpi" dest="build.config"/>
+  </project>  
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" revision="master" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android14-6.1" />
