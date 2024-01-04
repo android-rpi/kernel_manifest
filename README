@@ -4,7 +4,7 @@
  Make separate kernel directory apart from Android source.
 
   $ cd <kernel directory>
-  $ repo init -u https://github.com/android-rpi/kernel_manifest -b arpi14-6.1
+  $ repo init -u https://github.com/android-rpi/kernel_manifest -b arpi14-6.1.62
   $ repo sync
  
 # Build Kernel

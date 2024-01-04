@@ -20,7 +20,7 @@
     <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
   <remote  name="arpi" fetch="."/>  
-  <project path="common" name="kernel_arpi" revision="arpi14-6.1" remote="arpi">
+  <project path="common" name="kernel_arpi" revision="arpi14-6.1.62" remote="arpi">
       <linkfile src="build.config.arpi" dest="build.config"/>
   </project>  
   <project path="kernel/tests" name="kernel/tests" />
