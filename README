@@ -12,8 +12,8 @@
 
   Output files are under out/arpi14-6.1/dist/
     Image.gz
-    bcm2711-rpi-*.dtb
-    vc4-kms-v3d-pi4.dtbo
+    bcm2712-rpi-5-b.dtb
+    vc4-kms-v3d-pi5.dtbo
 
-# Build Android for Raspberry Pi 4
- https://github.com/android-rpi/device_arpi_rpi4
+# Build Android for Raspberry Pi 5
+ https://github.com/android-rpi/device_arpi_rpi5
